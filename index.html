@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Каталог товаров</title>
+  </head>
+  <body>
+    <div class="filters">
+      <div>
+        <select id="categoryFilter" class="categoryFilter">
+          <option value="">Все категории</option>
+        </select>
+        <button id="resetFilters" class="button">Сбросить все фильтры</button>
+      </div>
+      <div id="rangeFilters" class="rangeFilters">
+        <label for="minPrice">Минимальная цена:</label>
+        <input type="number" id="minPrice" placeholder="0" class="input" />
+
+        <label for="maxPrice">Максимальная цена:</label>
+        <input type="number" id="maxPrice" placeholder="1000" class="input" />
+
+        <button id="minMaxButton" class="button">Применить фильтр</button>
+      </div>
+      <div id="sortButtons" class="sortButtons">
+        <button type="button" id="name" class="button">
+          Сортировать по названию
+        </button>
+        <button type="button" id="priceAsc" class="button">
+          Сортировать по возрастанию цены
+        </button>
+        <button type="button" id="priceDesc" class="button">
+          Сортировать по убыванию цены
+        </button>
+        <button type="button" id="rating" class="button">
+          Сортировать по рейтингу
+        </button>
+      </div>
+    </div>
+    <div class="loader">Loading...</div>
+    <div id="productList" class="product-list"></div>
+    <script src="index.js"></script>
+  </body>
+</html>
